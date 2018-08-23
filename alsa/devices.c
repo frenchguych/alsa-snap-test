@@ -36,6 +36,7 @@ devices_list()
             break;
         }
 
+	fprintf(stderr, "card_num = %d\n", card_num);
         if (card_num < 0)
         {
             break;
