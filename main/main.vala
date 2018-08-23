@@ -11,10 +11,6 @@ namespace AlsaSnapTest {
 
         protected override void activate() {
             var devices = Alsa.Devices.list();
-            for (var i = 0; i < devices.length; i++) {
-                var device = devices.index(i);
-                stdout.printf("device: %s\n", device);
-            }
         }
 
         public static int main(string[] args) {

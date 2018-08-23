@@ -19,7 +19,7 @@ devices_list()
             break;
         }
 
-	fprintf(stderr, "card_num = %d\n", card_num);
+	    fprintf(stderr, "card_num = %d\n", card_num);
         if (card_num < 0)
         {
             break;
@@ -45,8 +45,8 @@ devices_list()
             const char* card_id = snd_ctl_card_info_get_id(card_info);
             gchar* card = g_strdup_printf("%s", card_name);
             g_array_append_val(list, card);
-            fprintf(stderr, "DEBUG : card_name = %s\n", card_name);
-            fprintf(stderr, "DEBUG : card_id = %s\n", card_id);
+            fprintf(stderr, "card_name = %s\n", card_name);
+            fprintf(stderr, "card_id = %s\n", card_id);
         }
 
         snd_ctl_close(card_handle);
