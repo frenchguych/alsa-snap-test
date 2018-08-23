@@ -1,18 +1,15 @@
-name: picaster
+name: alsa-snap-test
 version: 'dev'
-summary: Podcast recording and streaming application
+summary: alsa snap test
 description: |
-  PiCaster is a podcast recording and streaming application,
-  easy to use for beginners, but with enough functionaliy
-  to suit the needs of intermediate or experienced podcasters.
+  alsa snap test
 
 grade: devel
 confinement: devmode
 
 apps:
-  picaster:
-    command: desktop-launch alsa-launch $SNAP/bin/picaster
-    desktop: share/applications/picaster.desktop
+  alsa-snap-test:
+    command: desktop-launch alsa-launch $SNAP/bin/alsa-snap-test
     plugs: 
       - pulseaudio
       - home
@@ -28,7 +25,7 @@ parts:
   alsa-plugins:
     after:
       - alsa-lib
-  picaster:
+  alsa-snap-test:
     plugin: autotools
     source: https://github.com/frenchguych/alsa-snap-test.git
     source-branch: master
