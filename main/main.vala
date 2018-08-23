@@ -27,13 +27,6 @@ namespace PiCaster {
         }
 
         protected override void activate() {
-            var main_window = new Gtk.ApplicationWindow(this);
-            main_window.title = "PiCaster";
-
-            main_window.set_decorated(false);
-            main_window.fullscreen();
-            main_window.show_all();
-
             var devices = Alsa.Devices.list();
             for (var i = 0; i < devices.length; i++) {
                 var device = devices.index(i);
