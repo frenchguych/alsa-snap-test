@@ -25,23 +25,6 @@ devices_list()
             break;
         }
 
-        char* name;
-        if ((err = snd_card_get_name(card_num, &name)) < 0)
-        {
-            fprintf(stderr, "Cannot get card name of card %i : %s\n", card_num, snd_strerror(err));
-            continue;
-        }
-        fprintf(stderr, "card name : %s\n", name);
-        free(name);
-
-        if ((err = snd_card_get_longname(card_num, &name)) < 0)
-        {
-            fprintf(stderr, "Cannot get card long name of card %i : %s\n", card_num, snd_strerror(err));
-            continue;
-        }
-        fprintf(stderr, "card long name : %s\n", name);
-        free(name);
-
         char str[64];
         sprintf(str, "hw:%i", card_num);
         if ((err = snd_ctl_open(&card_handle, str, 0)) < 0)
