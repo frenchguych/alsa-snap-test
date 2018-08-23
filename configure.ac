@@ -1,4 +1,4 @@
-AC_INIT([picaster], [0.5], [yannick@frenchguy.ch])
+AC_INIT([alsasnaptest], [0.5], [yannick@frenchguy.ch])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign subdir-objects])
 AC_USE_SYSTEM_EXTENSIONS
 AC_PROG_CC

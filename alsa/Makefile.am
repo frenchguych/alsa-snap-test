@@ -1,9 +1,9 @@
-noinst_LTLIBRARIES = libpicasteralsa.la
+noinst_LTLIBRARIES = libalsa.la
 
-libpicasteralsa_la_SOURCES = devices.c
+libalsa_la_SOURCES = devices.c
 
-libpicasteralsa_la_CFLAGS   = @ALSA_CFLAGS@
-libpicasteralsa_la_CFLAGS  += @GTK_CFLAGS@
+libalsa_la_CFLAGS   = @ALSA_CFLAGS@
+libalsa_la_CFLAGS  += @GTK_CFLAGS@
 
-libpicasteralsa_la_LIBADD  = @ALSA_LIBS@
-libpicasteralsa_la_LIBADD += @GTK_LIBS@
+libalsa_la_LIBADD  = @ALSA_LIBS@
+libalsa_la_LIBADD += @GTK_LIBS@
