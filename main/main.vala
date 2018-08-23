@@ -10,7 +10,7 @@ namespace AlsaSnapTest {
         }
 
         protected override void activate() {
-            var devices = Alsa.Devices.list();
+            Alsa.Devices.list();
         }
 
         public static int main(string[] args) {
