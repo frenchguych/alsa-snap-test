@@ -11,6 +11,7 @@ apps:
   alsa-snap-test:
     command: desktop-launch alsa-launch $SNAP/bin/alsa-snap-test
     plugs: 
+      - alsa
       - pulseaudio
       - home
       - network
